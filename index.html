@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Viskefi - Confluence</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+  <header>
+    <img src="images/logo.svg" alt="Logo" class="logo1">
+  </header>
+  <div class="container">
+    <div class="search-container">
+      <input type="text" id="find" onkeyup="search()" placeholder="Search..." class="search-input" >
+      <button class="search-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="card-container">
+    <div class="card">
+      <div class="card-content">
+        <h4>Studio Pipeline</h4>
+        <p>The 3D Animation Studio Pipeline is a detailed processes to convert an idea into a finished product.
+          It is a system designed to take each step in a pre...</p>
+        <a href="studioPipline.html" class="read-more ">Read More</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h4>Departmental Workflows</h4>
+        <p>Workflow Diagram Department workflow diagram can be found here</p>
+        <a href="DepartmentalWorkflows.html" class="read-more ">Read More</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h4>Starting Up with VISKEFI Pipeline - As Freshers</h4>
+        <p>Here we are going to learn about the basic things that a fresher should know about the Viskefi studio work-flow.</p>
+        <a href="freshersGuide.html" class="read-more ">Read More</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <div class="card">
+      <div class="card-content">
+        <h4>Lookdev/Lighting Tab</h4>
+        <p>Lookdev/Lighting Tab contains tools required for Look Development and Lighting.</p>
+        <a href="LookdevLightingTab.html" class="read-more ">Read More</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h4>Card two</h4>
+        <p>Make your website look great on any device with responsive CSS cards. These cards adjust to different
+          screens, making your site easy to use. Upgrade your web design skills in a snap</p>
+        <a href="" class="read-more ">Read More</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h4>Card three</h4>
+        <p>Make your website look great on any device with responsive CSS cards. These cards adjust to different
+          screens, making your site easy to use. Upgrade your web design skills in a snap</p>
+        <a href="" class="read-more ">Read More</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <div class="card">
+      <div class="card-content">
+        <h4>Card One</h4>
+        <p>Make your website look great on any device with responsive CSS cards. These cards adjust to different
+          screens, making your site easy to use. Upgrade your web design skills in a snap</p>
+        <a href="" class="read-more ">Read More</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h4>Card two</h4>
+        <p>Make your website look great on any device with responsive CSS cards. These cards adjust to different
+          screens, making your site easy to use. Upgrade your web design skills in a snap</p>
+        <a href="" class="read-more ">Read More</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h4>Card three</h4>
+        <p>Make your website look great on any device with responsive CSS cards. These cards adjust to different
+          screens, making your site easy to use. Upgrade your web design skills in a snap</p>
+        <a href="" class="read-more ">Read More</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <div class="card">
+      <div class="card-content">
+        <h4>Card One</h4>
+        <p>Make your website look great on any device with responsive CSS cards. These cards adjust to different
+          screens, making your site easy to use. Upgrade your web design skills in a snap</p>
+        <a href="" class="read-more ">Read More</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h4>Card two</h4>
+        <p>Make your website look great on any device with responsive CSS cards. These cards adjust to different
+          screens, making your site easy to use. Upgrade your web design skills in a snap</p>
+        <a href="" class="read-more ">Read More</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h4>Card three</h4>
+        <p>Make your website look great on any device with responsive CSS cards. These cards adjust to different
+          screens, making your site easy to use. Upgrade your web design skills in a snap</p>
+        <a href="" class="read-more ">Read More</a>
+      </div>
+    </div>
+  </div>
+
+<!-- javascript -->
+<script type="text/javascript">
+  function search() {
+  let filter = document.getElementById('find').value.toUpperCase();
+  let item = document.querySelectorAll('.card');
+  let l = document.getElementsByTagName('h4');
+  for(var i = 0;i<=l.length;i++){
+  let a=item[i].getElementsByTagName('h4')[0];
+  let value=a.innerHTML || a.innerText || a.textContent;
+  if(value.toUpperCase().indexOf(filter) > -1) {
+  item[i].style.display="";
+  }
+  else
+  {
+  item[i].style.display="none";
+  }
+  }
+  }
+  </script>
+
+</body>
+
+</html>

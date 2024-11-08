@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lookdev/Lighting Tab</title>
+  <link rel="stylesheet" href="css/lookdevLighting.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <h4>Lookdev/Lighting Tab</h4>
+    <ul>
+      <li><a href="#Template" style="text-decoration: none;">Template</a></li>
+      <li><a href="#CreateLights" style="text-decoration: none;">Create Lights</a></li>
+      <li><a href="#LightAttributes" style="text-decoration: none;">Light Attributes</a></li>
+      <li><a href="#TextureColorspace" style="text-decoration: none;">Texture Colorspace</a></li>
+      <li><a href="#ShapeAttributes" style="text-decoration: none;">Shape Attributes</a></li>
+      <li><a href="#LightFilters" style="text-decoration: none;">Light Filters</a></li>
+      <li><a href="#GeometryPref" style="text-decoration: none;">Geometry Pref</a></li>
+      <li><a href="#PositionMask" style="text-decoration: none;">Position Mask</a></li>
+      <li><a href="#SceneScale" style="text-decoration: none;">Scene Scale</a></li>
+      <li><a href="#CameraOverscan" style="text-decoration: none;">Camera Overscan</a></li>
+      <li><a href="#CameraSplit" style="text-decoration: none;">Camera Split</a></li>
+
+    </ul>
+    <div class="card">
+      <h4 class="names" id="Template">Template</h4>
+      <div class="card-body">
+        <div class="user-info">
+          <img src="images/Template.jfif">
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4 class="names" id="CreateLights">CreateLights</h4>
+      <div class="card-body">
+        <div class="user-info">
+          <img src="images/createLights.jfif">
+        </div>
+        <h3>Description:</h3>
+        <ul>
+          <li>This tool create lights with predefined settings.</li>
+        </ul>
+        <h3>Tools:</h3>
+        <ul>
+          <li>Directional Light - Create Directional Light.</li>
+          <li>Point Light - Create Point Light.</li>
+          <li>Spot Light - Create Spot Light.</li>
+          <li>Skydome Light - Create Skydome Light.</li>
+          <li>Area Light - Create Area Light.</li>
+          <li>Softbox Area Light - Create Area Light with Softbox map connected in Light color.</li>
+          <li>Light Controller - Select Light/Lights and click Light Controller. It will create a Locator, which will
+            work as a Light Target.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4 class="names" id="LightAttributes">Light Attributes</h4>
+      <div class="card-body">
+        <div class="user-info">
+          <img src="images/LightAttributes.jfif">
+        </div>
+        <h3>Description:</h3>
+        <ul>
+          <li>This tool create lights with predefined settings.</li>
+        </ul>
+        <h3>Tools:</h3>
+        <ul>
+          <li>Use Color Temperature - This will Tick Use Color Temperature Attribute for selected lights.</li>
+          <li>Color - If Use Color Temperature is unchecked, it will open Maya Color Picker. If Use Color Temperature
+            is checked, it will only show Color Temperature in the swatch.</li>
+          <li>Temperature - Change Color Temperature for selected lights. Make sure Use Color Temperature is Ticked.
+          </li>
+          <li>Exposure - Change Light Exposure for selected lights.</li>
+          <li>Samples - Chnage Light Samples for selected lights.</li>
+          <li>Light Group Name - Add Light Group Name for selected lights.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4 class="names" id="TextureColorspace">Texture Colorspace</h4>
+      <div class="card-body">
+        <div class="user-info">
+          <img src="images/TextureColorspace.jfif">
+        </div>
+        <h3>Description:</h3>
+        <ul>
+          <li>This tool will set Colorspace for selected file/aiImage nodes. You can also select textures from TX
+            Manager.</li>
+        </ul>
+        <h3>Tools:</h3>
+        <ul>
+          <li>ACES - ACEScg = Set Colorspace to ACES - ACEScg. </li>
+          <li>Utility - Raw = Set Colorspace to Utility - Raw.</li>
+          <li> Utility - Linear = sRGB - Set Colorspace to Utility - Linear - sRGB.</li>
+          <li> Utility - Linear = sRGB - Set Colorspace to Utility - Linear - sRGB.</li>
+          <li> Utility - Linear = sRGB - Set Colorspace to Utility - Linear - sRGB.</li>
+          <li>Utility - Linear = sRGB - Set Colorspace to Utility - Linear - sRGB.</li>
+          <li>Utility - sRGB = Texture - Set Colorspace to Utility - sRGB - Texture.</li>
+          <li>Output - sRGB = Set Colorspace to Output - sRGB.</li>
+          <li>Output - Rec.709 = Set Colorspace to Output - Rec.709.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4 class="names" id="ShapeAttributes">Shape Attributes</h4>
+      <div class="card-body">
+        <div class="user-info">
+          <img src="images/ShapeAttributes.jfif">
+        </div>
+        <h3>Description:</h3>
+        <ul>
+          <li>This tool will change Shape Attributes of selected Geometries or Selection Sets.</li>
+        </ul>
+        <h3>Tools:</h3>
+        <ul>
+          <li>Primary Visibility - Sets On or Off Primary Visibility.</li>
+          <li>Casts Shadows - Sets On or Off Casts Shadows.</li>
+          <li>Self Shadows - Sets On or Off Self Shadows.</li>
+          <li>Diffuse Reflection - Sets On or Off Diffuse Reflection.</li>
+          <li>Specular Reflection - Sets On or Off Specular Reflection</li>
+          <li>Diffuse Transmission - Sets On or Off Diffuse Transmission</li>
+          <li>Specular Transmission - Sets On or Off Specular Transmission</li>
+          <li>Matte - Sets On or Off Matte</li>
+          <li>Catclark - Sets On or Off Catclark Subdivision.</li>
+          <li>Catclark Iterations - Sets Catclark Subdivision Iterations.</li>
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4 class="names" id="LightFilters">Light Filters</h4>
+      <div class="card-body">
+        <div class="user-info">
+          <img src="images/LightFilters.jfif">
+        </div>
+        <h3>Description:</h3>
+        <ul>
+          <li>This tool will allow you to Create, Disconnect or Delete Arnold Light Filters from Maya Scene. This will
+            work on multiple selected lights.</li>
+        </ul>
+        <h3>Tools:</h3>
+        <ul>
+          <h3>Connect:</h3>
+          <li>Dropdown List - A Dropdown List of all Arnold Light Filters exists in your current Maya Scene.</li>
+          <li>Reload - This will Reload/Update Dropdown List. This step is required if any Arnold Light Filter is
+            created manually.</li>
+          <li>Connect - This will connect selected Arnold Light Filter from Dropdown List to the selected lights.</li>
+          <li>Disconnect - This will disconnect selected Arnold Light Filter from Dropdown List to the selected lights.
+          </li>
+          <li>Delete - This will delete selected Arnold Light Filter from current Maya Scene.</li>
+        </ul>
+        <br />
+        <ul>
+          <h3>Create:</h3>
+          <li>Gobo - Create and Connect Gobo on selected lights.</li>
+          <li>Barndoor - Create and Connect Barndoor on selected lights.</li>
+          <li>Light Blocker - Create and Connect Light Blocker on selected lights.</li>
+          <li>Light Decay - Create and Connect Light Decay on selected lights.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4 class="names" id="GeometryPref">Geometry Pref</h4>
+      <div class="card-body">
+        <div class="user-info">
+          <img src="images/GeometryPref.jfif">
+        </div>
+        <h3>Description:</h3>
+        <ul>
+          <li>This tool generates Pref (Position Reference/Texture Reference) on mentioned frame on selected Geometries.</li>
+          <li>After generating Pref, you can look for “mtoa_varying_Pref” attribute on shape node to confirm if it is generated, or just load Pref AOV and render.</li>
+        </ul>
+        <h3>Tools:</h3>
+        <ul>
+         <li>Frame - Frame number on which you want to generate Pref.</li>
+         <li>Generate - Generate Pref on mentioned frame on selected Geometries.</li>
+         <li>Delete - Delete Pref on selected Geometries.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4 class="names" id="PositionMask">Position Mask</h4>
+      <div class="card-body">
+        <div class="user-info">
+          <img src="images/PositionMask.jfif">
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4 class="names" id="SceneScale">Scene Scale</h4>
+      <div class="card-body">
+        <div class="user-info">
+          <img src="images/SceneScale.jfif">
+        </div>
+        <h3>Description:</h3>
+        <ul>
+          <li>This tool will set selected Lights Exposure as per Scene Scale. Just select all the required lights, type Old and New Scale and click Set.</li>
+        </ul>
+        <h3>Tools:</h3>
+        <ul>
+         <li>Old Scale - Old Maya Scene Scale.</li>
+         <li>New Scale - New Maya Scene Scale.</li>
+         <li>Set - Set Light Exposure as per Old and New Scale.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4 class="names" id="CameraOverscan">Camera Overscan</h4>
+      <div class="card-body">
+        <div class="user-info">
+          <img src="images/CameraOverscan.jfif">
+        </div>
+        <h3>Description:</h3>
+        <ul>
+          <li>This tool will set Camera Overscan for selected camera and scene image resolution.</li>
+        </ul>
+        <h3>Tools:</h3>
+        <ul>
+         <li>Old Resolution - Current Maya Scene Image Resolution.</li>
+        <li>New Resolution - New Maya Scene Image Resolution as per Camera Overscan value.</li>
+        <li>Reverse - Reverse will reverse the Camera Overscan calculation. This is useful to revert back Camera Overscan. For example, if you set overscan to 1.2, and you want to remove the overscan, then just tick Reverse and type 1.2 overscan again.</li>
+        <li>Camera Overscan - Camera Overscan value.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4 class="names" id="CameraSplit">Camera Split</h4>
+      <div class="card-body">
+        <div class="user-info">
+          <img src="images/CameraSplit.jfif">
+        </div>
+        <h3>Description:</h3>
+        <ul>
+        <li>This tool will split frame to pieces. There is one fixed Vertical Split and you can specify Horizontal Splits.</li>
+        </ul>
+        <h3>Tools:</h3>
+        <ul>
+         <li>Horizontal Split - Number of Horizontal Splits for frame splitting.</li>
+         <li>Create Cameras - Create number of cameras as per Horizontal Split. You have to first select Render Camera.</li>
+         <li>Save Files - Select all Split Cameras and Save Files. Same number of files as cameras will be saved with Camera Suffix in the scene folder. Cameras will be set in their respective files.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
