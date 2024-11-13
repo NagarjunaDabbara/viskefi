@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upgrade to latest version of MtoA</title>
+    <link rel="stylesheet" href="css/installAutodeskMaya.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, .1)
+        }
+
+        header {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px
+        }
+
+        header h1 {
+            font-size: 1.8em;
+            color: #333
+        }
+
+        .content,
+        .glossary {
+            margin-bottom: 20px
+        }
+
+        .UpgradetolatestversionofMtoA {
+            max-width: 100%;
+        }
+
+        .glossary h2 {
+            font-size: 1.4em;
+            margin-bottom: 10px
+        }
+
+        ul {
+            margin-top: 10px;
+            padding-left: 20px
+        }
+
+        ul li {
+            margin-bottom: 5px
+        }
+
+        strong {
+            font-weight: 700;
+            color: #333
+        }
+
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+            align-items: center;
+        }
+
+        @media (max-width:600px) {
+            .container {
+                padding: 10px
+            }
+
+            header h1 {
+                font-size: 1.5em
+            }
+
+            .glossary h2 {
+                font-size: 1.2em
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Installing VLC</h1>
+        </header>
+
+        <section class="content">
+            <h2>Installing VLC</h2>
+        </section>
+    <p>Use RPM Fusion for EL7. Only available for x86_64.</p><br>
+<p>This repository uses EPEL. Please verify to enable the "optionals" and "extras" channels for RHN subscriptions.</p>
+<p>The vlc-3.0x branch is provided for EL7</p><br>
+<p>Install rpmfusion-free-release-7.noarch.rpm for EL7.</p><br>
+<p>    $> su - <br>
+    #> subscription-manager repos --enable "rhel-*-optional-rpms" --enable "rhel-*-extras-rpms" # Only needed for RHEL<br>
+    #> yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm<br>
+    #> yum install https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm<br>
+    #> yum install vlc<br>
+    #> yum install vlc-core (for minimal headless/server install)<br>
+    #> yum install python-vlc npapi-vlc (optionals)</p>
+    </div>
+</body>
+</html>

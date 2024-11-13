@@ -5,12 +5,136 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/index.css">
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif
+}
+
+header {
+  margin: 15px;
+}
+.name{
+  color: #f24a2d;
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+}
+.logo {
+  width: 60px;
+  height: auto;
+  max-width: 100%
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 50px
+}
+
+.card {
+  width: 325px;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+  cursor: pointer
+}
+
+.card-content {
+  width: 300px;
+  height: 250px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box
+}
+
+.card-content p {
+  font-size: 17px;
+  margin-bottom: 20px;
+  color: #666
+}
+
+.card-content .read-more {
+  font-size: 17px;
+  text-decoration: none;
+  color: #f24a2d;
+  font-weight: 700
+}
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  background-color: #fff;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+  overflow: hidden;
+  transition: all .3s ease
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  outline: 0;
+  font-size: 16px;
+  color: #333
+}
+
+.search-input::placeholder {
+  color: #888;
+  font-size: 14px
+}
+
+.search-btn {
+  background-color: #f24a2d;
+  padding: 12px;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color .3s ease;
+  color: #fff
+}
+
+.search-btn:hover {
+  background-color: #f24a2d
+}
+
+@media (max-width:768px) {
+  .search-container {
+    max-width: 400px
+  }
+}
+
+@media (max-width:480px) {
+  .search-container {
+    width: 90%
+  }
+}
+  </style>
 </head>
 
 <body>
   <header>
-    <img src="images/logo.svg" alt="Logo" class="logo1">
+    <img src="images/logo.svg" alt="Logo" class="logo">
   </header>
+  <div class="name"><h1><i>Viskefi - Confluence</i></h1></div>
   <div class="container">
     <div class="search-container">
       <input type="text" id="find" onkeyup="search()" placeholder="Search..." class="search-input" >
@@ -22,7 +146,14 @@
       </button>
     </div>
   </div>
+  
   <div class="card-container">
+    <div class="card">
+      <div class="card-content">
+        <h4>Software</h4>
+        <a href="Software.html" class="read-more ">Read More</a>
+      </div>
+    </div>
     <div class="card">
       <div class="card-content">
         <h4>Studio Pipeline</h4>
@@ -39,7 +170,12 @@
         <a href="DepartmentalWorkflows.html" class="read-more ">Read More</a>
       </div>
     </div>
+    
+  </div>
 
+  
+
+  <div class="card-container">
     <div class="card">
       <div class="card-content">
         <h4>Starting Up with VISKEFI Pipeline - As Freshers</h4>
@@ -47,9 +183,7 @@
         <a href="freshersGuide.html" class="read-more ">Read More</a>
       </div>
     </div>
-  </div>
 
-  <div class="card-container">
     <div class="card">
       <div class="card-content">
         <h4>Lookdev/Lighting Tab</h4>
@@ -60,19 +194,34 @@
 
     <div class="card">
       <div class="card-content">
-        <h4>Card two</h4>
-        <p>Make your website look great on any device with responsive CSS cards. These cards adjust to different
-          screens, making your site easy to use. Upgrade your web design skills in a snap</p>
+        <h4>Pipeline Tools - Usage</h4>
+        <p>Pyblish a publish tool included in Maya for various departments to publish the artists work to the upstream department.</p>
+        <a href="PipelineTools-Usage.html" class="read-more ">Read More</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <div class="card">
+      <div class="card-content">
+        <h4> </h4>
+        <p></p>
+        <a href=".html" class="read-more ">Read More</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h4></h4>
         <a href="" class="read-more ">Read More</a>
       </div>
     </div>
 
     <div class="card">
       <div class="card-content">
-        <h4>Card three</h4>
-        <p>Make your website look great on any device with responsive CSS cards. These cards adjust to different
-          screens, making your site easy to use. Upgrade your web design skills in a snap</p>
-        <a href="" class="read-more ">Read More</a>
+        <h4> </h4>
+        <p></p>
+        <a href=".html" class="read-more ">Read More</a>
       </div>
     </div>
   </div>
@@ -156,5 +305,4 @@
   </script>
 
 </body>
-
 </html>

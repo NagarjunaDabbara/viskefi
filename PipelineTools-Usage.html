@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viskefi Menu</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: #1a73e8;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .menu {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .menu-header {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .department {
+            margin-bottom: 20px;
+        }
+
+        .tools-list {
+            margin-left: 20px;
+            color: #555;
+        }
+
+        .tool-item {
+            margin: 5px 0;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .menu {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="menu">
+        <h2>Pipeline Tools - Usage</h2>
+        <h2>Pyblish : </h2>
+       
+            <li>
+                Pyblish a publish tool included in Maya for various departments to publish the artists work to the upstream department.
+            </li>
+            <li>
+                How to launch : Maya > viskefi-menu >  Load pyblish 
+                          File > pyblish . 
+            </li>
+       
+        <h2>Scene Builder : </h2>
+       
+            <li>Scene builder is a tool designed for the building of the lighting scene.</li>
+            <li>How to launch : Maya > viskefi-menu >  Load Scene builder . </li>
+      
+        <h2>Viskefi Toolbar (for lighting dept.):</h2>
+        <li>Viskefi toolbar contains the tools that are useful in the scene building for lighting department.</li>
+        <li>How to launch : Maya > viskefi-menu >  Load Viskefi Toolbar . </li>
+        <i class="fa fa-file">Viskefi Toolbar is Docked at the Right of the Maya below the attribute editor.</i>
+        <h2>Rig Builder :</h2>
+        <li>Rig builder is a tool designed for the building of the Rig scene.</li>
+        <li>How to launch : Maya > viskefi-menu > rigging > Load rig Builder . </li>
+        <h2>Sanity Checker :</h2>
+        <li>Sanity checker a tool for the modeling department for checking the scene before publishing.</li>
+        <li>How to launch : Maya > viskefi-menu > modelling > Sanity Checker . </li>
+        
+        <h2>Viskefi-Menu</h2>
+        <p>Viskefi menu contains all the tools that are required for respective departments.</p>
+
+        <div class="department">
+            <div class="menu-header">Animation Department: All tools under the animation department menu.</div>
+            <ul class="tools-list">
+                <li class="tool-item">├── animbot</li>
+                <li class="tool-item">├── animbotarshake</li>
+                <li class="tool-item">├── animbotcamera_shake</li>
+                <li class="tool-item">├── animbotFCM_Multiview</li>
+                <li class="tool-item">├── animbotjop_lock_to_world</li>
+                <li class="tool-item">├── animbotjs_stickymod</li>
+                <li class="tool-item">├── animbotld_anim_to_curve</li>
+                <li class="tool-item">├── animbotlow_res_to_high_res</li>
+                <li class="tool-item">├── animbotmog_ikFk_switch</li>
+                <li class="tool-item">├── animbotOverlapper</li>
+                <li class="tool-item">├── animbotsnap</li>
+                <li class="tool-item">├── animbotstudiolibrary</li>
+                <li class="tool-item">├── animbottime_warper</li>
+                <li class="tool-item">├── animbotWorld_Space_Locators</li>
+            </ul>
+        </div>
+
+        <div class="department">
+            <div class="menu-header">Modeling Department: All tools under the Modeling department menu.</div>
+            <ul class="tools-list">
+                <li class="tool-item">├── animbotrename_tool</li>
+                <li class="tool-item">├── animbotsanity_checker</li>
+            </ul>
+        </div>
+
+        <div class="department">
+            <div class="menu-header">Rigging Department: All tools under the Rigging department menu.</div>
+            <ul class="tools-list">
+                <li class="tool-item">├── animbotadvanced_skeleton</li>
+                <li class="tool-item">├── animbotBiped</li>
+                <li class="tool-item">├── animbotextractDeltasDuplicateMesh</li>
+                <li class="tool-item">├── animbotFace</li>
+                <li class="tool-item">├── animbotload_rig_builder</li>
+                <li class="tool-item">├── animbotperformExtractDeltas</li>
+                <li class="tool-item">├── animbotPicker</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
