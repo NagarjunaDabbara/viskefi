@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workflow - MATCHMOVE Dept</title>
+    <link rel="stylesheet" href="css/DepartmentalWorkflows.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Workflow - MATCHMOVE Dept</h1>
+      <ul>
+        <h2>INPUTS:</h2>
+       <li>MATCHMOVE gets data from Editorial Dept as depending on clients.</li>
+       <li>MATCHMOVE gets .JPEG, .obj, .ma, .fbx & .exr file format from editorial Dept.</li>
+       <li>MATCHMOVE uses camera info like focal length, film-back , focus distance, camera height and lidar scan etc, which is provided by client.</li>
+       <li>MATCHMOVE uses char-rig for body track.</li>
+       <li>MATCHMOVE uses 3DEqualizer, Maya Nuke as their working environment.</li>
+      </ul>
+      <ul>
+        <h2>OUTPUTS:</h2>
+        <li>MATCHMOVE sends data to ANIM, FX,LIGHTING and COMP.</li>
+        <li>MATCHMOVE sends data to down-strem dept's in .ma , .abc , .fbx, .nk formats.</li>
+      </ul>
+      <ul>
+        <h2>ISSUES</h2>
+        <h3>While publishing</h3>
+            <ol>
+                <li>camera should be able to publish .ma , .abc , .fbx formats.</li>
+                <li>MatchMove-Geo should be able to publish .ma , .abc , .fbx formats.</li>
+                <li>Objects or Characters cache must be able to publish only in .abc.</li>
+            </ol>
+            <h3>Dailies for</h3>
+            <ol>
+                <li>WireFrame playblast</li>
+                 <li>Cone playblast</li>   
+                 <li> Shaded playblast</li>  
+                 <li>Outline playblast</li>   
+                 <li>Perspective playblast</li>    
+                 <li>Point blast playblast</li>   
+            </ol>
+      </ul>
+    </div>
+  </body>
+</html>

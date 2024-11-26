@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workflow - GROOM Dept</title>
+    <link rel="stylesheet" href="css/DepartmentalWorkflows.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Workflow - GROOM Dept</h1>
+      <ul>
+        <h2>INPUTS:</h2>
+        <li>GROOM gets data from MODELING & TEXTURING Depts.</li>
+        <li>GROOM gets data from up-stream Dept’s in .abc & .obj formats.</li>
+        <li>
+          GROOM use Houdini and Maya(X-gen plugin) softwares as working
+          environment.
+        </li>
+      </ul>
+      <ul>
+        <h2>OUTPUTS:</h2>
+        <li>
+          GROOM sends data to CFX for simulation and LIGHTING,LOOKDEV Dept’s.
+        </li>
+        <li>
+          GROOM sends data to down-strem dept's in .ass but for now using .abc
+          format for testing.
+        </li>
+        <li>GROOM uses Maya Pipeline</li>
+      </ul>
+      <ul>
+        <h2>ISSUES</h2>
+        <li>Currently exporting .abc not useful because of H-A plugin not working and to be used .ass instead .abc.</li>
+        <li>Houdini-Arnold plugin (third party Groom-Bear) needed.</li>
+        <li>When we get data from Asset Dept ,default naming conventions & exporting hierarchy must be done in categories.</li>
+        <li>Doing things for now manually like .abc files need to be automatically loaded etc, need to be automated.</li>
+      </ul>
+    </div>
+  </body>
+</html>

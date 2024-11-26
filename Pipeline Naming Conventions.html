@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Published Files</title>
+<style>
+    /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+table td {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    font-size: 14px;
+}
+
+table td:nth-child(2) {
+    font-size: 12px;
+    color: #555;
+}
+
+</style>    
+</head>
+<body>
+    <h1>Pipeline Naming Conventions
+<h2>Shotgun</h2>
+<h3>Assets</h3>
+<h4>TitleCase </h4>
+<p>Eg: </p>
+<li>DrogonFly</li>
+<li>VRHeadset </li>
+
+
+<h2>Sequences</h2>
+<h3>ALLCAPS</h3>
+<p>Eg: </p>
+<li>BWT</li>
+<li>PREVIZ </li>
+
+<h2>Shots</h2>
+<h3>ALLCAPS_WITH_UNDERSCORES</h3>
+<p>Eg: </p>
+<li>BWT_0100</li>
+<li>PREVIZ_0100 </li>
+
+    </h1>
+    <h1>Pipeline Paths</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Level</th>
+                <th>Studio Root</th>
+                <th>Show Root</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Python Source Files</td>
+                <td>Studio</td>
+                <td>/vis/studio/python</td>
+                <td>/vis/pipe/&lt;show&gt;/python</td>
+            </tr>
+            <tr>
+                <td>Config Files</td>
+                <td>Studio</td>
+                <td>/vis/studio/config</td>
+                <td>/vis/pipe/&lt;show&gt;/config</td>
+            </tr>
+            <tr>
+                <td>Executables</td>
+                <td>Studio</td>
+                <td>/vis/studio/bin</td>
+                <td>/vis/pipe/&lt;show&gt;/config</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Work Files</h2>
+    <p><strong>Example schema for work files used by various DCC applications</strong></p>
+    <p>Works schema: <code>&lt;root&gt;/&lt;project_code&gt;/&lt;entity_code&gt;/&lt;step_task&gt;/work/&lt;workspace_version&gt;</code></p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Task</th>
+                <th>Applications</th>
+                <th>Path</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>baryonix-model_v0001.ma</td>
+                <td>Model</td>
+                <td>Maya</td>
+                <td>/vis/shows/bary/assets/&lt;asset_type&gt;/baryonix/model/work/&lt;user&gt;/maya/scenes/baryonix_model_v0001.ma</td>
+            </tr>
+            <tr>
+                <td>baryonix-lookdev_v0001.ma</td>
+                <td>Lookdev</td>
+                <td>Maya</td>
+                <td>/vis/shows/bary/assets/&lt;asset_type&gt;/baryonix/lookdev/work/&lt;user&gt;/maya/scenes/baryonix_lookdev_v0001.ma</td>
+            </tr>
+            <tr>
+                <td>baryonix-rig_v0001.ma</td>
+                <td>Rig</td>
+                <td>Maya</td>
+                <td>/vis/shows/bary/assets/&lt;asset_type&gt;/baryonix/rig/work/&lt;user&gt;/maya/scenes/baryonix_rig_v0001.ma</td>
+            </tr>
+            <tr>
+                <td>bwt_0100-layout_env_v0001.ma</td>
+                <td>Layout_Env</td>
+                <td>Maya</td>
+                <td>/vis/shows/bary/shots/bwt_0100/layout_env/work/&lt;user&gt;/maya/scenes/bwt_0100-layout_env_v0001.ma</td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+    <div class="container">
+        <h1>Published Files</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Path</th>
+                    <th>Element</th>
+                    <th>Published File Type</th>
+                    <th>Resolution</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Baryonix:Model_Base_v0001:hi:obj</td>
+                    <td>/vis/shows/bary/assets/{asset_type}/baryonix/model/model_base/v0001/hi/baryonix_model_base_hi_v0001.obj</td>
+                    <td>Model_Base</td>
+                    <td>Geometry</td>
+                    <td>hi</td>
+                </tr>
+                <tr>
+                    <td>Baryonix:Model_Base_v0001:hi:ma</td>
+                    <td>/vis/shows/bary/assets/{asset_type}/baryonix/model/model_base/v0001/hi/baryonix_model_base_hi_v0001.ma</td>
+                    <td>Model_Base</td>
+                    <td>Geometry</td>
+                    <td>hi</td>
+                </tr>
+                <tr>
+                    <td>Baryonix:Model_Base_v0001:hi:abc</td>
+                    <td>/vis/shows/bary/assets/{asset_type}/baryonix/model/model_base/v0001/hi/baryonix_model_base_hi_v0001.abc</td>
+                    <td>Model_Base</td>
+                    <td>Geometry</td>
+                    <td>hi</td>
+                </tr>
+                <tr>
+                    <td>Baryonix:Lookdev_Base_v0001:hi:ma</td>
+                    <td>/vis/shows/bary/assets/{asset_type}/baryonix/lookdev/lookdev_base/v0001/hi/baryonix_lookdev_base_hi_v0001.ma</td>
+                    <td>Lookdev_Base</td>
+                    <td>Lookdev</td>
+                    <td>hi</td>
+                </tr>
+                <tr>
+                    <td>Baryonix:Shader_Base_v0001:hi:ma</td>
+                    <td>/vis/shows/bary/assets/{asset_type}/baryonix/lookdev/shader_base/v0001/hi/baryonix-shader_base_hi_v0001.ma</td>
+                    <td>Shader_Base</td>
+                    <td>Shader</td>
+                    <td>hi</td>
+                </tr>
+                <tr>
+                    <td>Baryonix:Texture_Base_dif_v0001:hi:tif</td>
+                    <td>/vis/shows/bary/assets/{asset_type}/baryonix/txt/texture_base/v0001/fullres/tif/dif/baryonix_texture_base_dif_fullres_v0001.%04d.tif</td>
+                    <td>Lookdev_Base</td>
+                    <td>Texture</td>
+                    <td>hi</td>
+                </tr>
+                <tr>
+                    <td>Baryonix:Texture_Base_dif_v0002:hi:tif</td>
+                    <td>/vis/shows/bary/assets/{asset_type}/baryonix/txt/texture_base/v0002/fullres/tif/dif/baryonix_texture_base_dif_fullres_v0002.%04d.tif</td>
+                    <td>Lookdev_Base</td>
+                    <td>Texture</td>
+                    <td>hi</td>
+                </tr>
+
+                <tr>
+                    <td>Baryonix:Turntable_Base_v0001:f1920x1080:exr</td>
+                    <td>/vis/shows/bary/assets/{asset_type}/baryonix/lookdev/turntable_base/v0001/f1920x1080/exr/baryonix-turntable_base_v0001.%04d.exr</td>
+                    <td>Turntable_Base</td>
+                    <td>Image</td>
+                    <td>f1920x1080</td>
+                </tr>
+
+
+                <tr>
+                    <td>Baryonix:Rig_Main_v0001:hi:ma</td>
+                    <td>/vis/shows/bary/assets/{asset_type}/baryonix/rig/rig_main/v0001/hi/ma/baryonix-rig_main_v0001.ma</td>
+                    <td>Rig_Main</td>
+                    <td>Rig</td>
+                    <td>hi</td>
+                </tr>
+
+                <tr>
+                    <td>BWT_0100:EnvLayout_v0001:hi:ma</td>
+                    <td>/vis/shows/bary/shots/bwt_0100/layout_env/envlayout/v0001/hi/abc/bwt_0100-envlayout_v0001.abc</td>
+                    <td>EnvLayout</td>
+                    <td>Cache</td>
+                    <td>hi</td>
+                </tr>
+                <tr>
+                    <td>BWT_0100:DragonFly_0001_v0001:hi:abc</td>
+                    <td>/vis/shows/bary/shots/bwt_0100/animation_main/dragonfly_0001/v0001/hi/abc/bwt_0100-dragonfly_0001_v0001.abc</td>
+                    <td>DragonFly_0001</td>
+                    <td>Cache</td>
+                    <td>hi</td>
+                </tr>
+                <tr>
+                    <td>BWT_0100:DragonFly_0002_v0001:hi:abc</td>
+                    <td>/vis/shows/bary/shots/bwt_0100/animation_main/dragonfly_0002/v0001/hi/abc/bwt_0100-dragonfly_0002_v0001.abc</td>
+                    <td>DragonFly_0002</td>
+                    <td>Cache</td>
+                    <td>hi</td>
+                </tr>
+                <tr>
+                    <td>BWT_0100:DragonFly_0003_v0001:hi:abc</td>
+                    <td>/vis/shows/bary/shots/bwt_0100/animation_main/dragonfly_0003/v0001/hi/abc/bwt_0100-dragonfly_0003_v0001.abc</td>
+                    <td>DragonFly_0003</td>
+                    <td>Cache</td>
+                    <td>hi</td>
+                </tr>
+                <tr>
+                    <td>BWT_0100:PrepFg1_v0001:f1920x1080:exr</td>
+                    <td>/vis/shows/bary/shots/bwt_0100/prep_main/prepfg1/v0001/f1920x1080/exr/bwt_0100-prepfg1_v0001.%04d.exr</td>
+                    <td>PrepFg1</td>
+                    <td>Image</td>
+                    <td>f1920x1080</td>
+                </tr>
+                <tr>
+                    <td>BWT_0100:PrepFg2_v0001:f1920x1080:exr</td>
+                    <td>/vis/shows/bary/shots/bwt_0100/prep_main/prepfg2/v0001/f1920x1080/exr/bwt_0100-prepfg2_v0001.%04d.exr</td>
+                    <td>PrepFg2</td>
+                    <td>Image</td>
+                    <td>f1920x1080</td>
+                </tr>
+
+                <tr>
+                    <td>BWT_0100:PrepBg_v0001:f1920x1080:exr</td>
+                    <td>/vis/shows/bary/shots/bwt_0100/prep_main/prepbg/v0001/f1920x1080/exr/bwt_0100-prepbg_v0001.%04d.exr</td>
+                    <td>PrepBg</td>
+                    <td>Image</td>
+                    <td>f1920x1080</td>
+                </tr>
+                <tr>
+                    <td>BWT_0100:Env_Beauty_v0001:f1920x1080:exr</td>
+                    <td>/vis/shows/bary/shots/bwt_0100/light_main/env_beauty/v0001/f1920x1080/exr/bwt_0100-env_beauty_v0001.%04d.exr</td>
+                    <td>Env_Beauty</td>
+                    <td>Image</td>
+                    <td>f1920x1080</td>
+                </tr>
+
+
+                <tr>
+                    <td>BWT_0100:CmpMain_v0001:f1920x1080:exr</td>
+                    <td>/vis/shows/bary/shots/bwt_0100/comp_main/cmpmain/v0001/f1920x1080/exr/bwt_0100-cmpmain_v0001.%04d.exr</td>
+                    <td>CmpMain</td>
+                    <td>Image</td>
+                    <td>f1920x1080</td>
+                </tr>
+                <tr>
+                    <td>BWT_0100:DragonFly_0001_v0001:hi:abc</td>
+                    <td>/vis/shows/bary/shots/bwt_0100/cfx_main/dragonfly_0001/v0001/hi/abc/bwt_0100-dragonfly_0001_v0001.abc</td>
+                    <td>DragonFly_0001</td>
+                    <td>Cache</td>
+                    <td>hi</td>
+                </tr>
+
+                <tr>
+                    <td>BWT_0100:DragonFly_0002_v0001:hi:abc</td>
+                    <td>/vis/shows/bary/shots/bwt_0100/cfx_main/dragonfly_0002/v0001/hi/abc/bwt_0100-dragonfly_0002_v0001.abc</td>
+                    <td>DragonFly_0002</td>
+                    <td>Cache</td>
+                    <td>hi</td>
+                </tr>
+                <tr>
+                    <td>BWT_0100:DragonFly_0003_v0001:hi:abc</td>
+                    <td>/vis/shows/bary/shots/bwt_0100/cfx_main/dragonfly_0003/v0001/hi/abc/bwt_0100-dragonfly_0003_v0001.abc</td>
+                    <td>DragonFly_0003</td>
+                    <td>Cache</td>
+                    <td>hi</td>
+                </tr>
+
+                <tr>
+                    <td>BWT_0100:PrepBg_v0001:f1920x1080:jpg</td>
+                    <td>/vis/shows/bary/shots/bwt_0100/prep_main/prepbg/v0001/f1920x1080/jpg/bwt_0100-prepbg_v0001.%04d.jpg</td>
+                    <td>PrepBg</td>
+                    <td>Image</td>
+                    <td>f1920x1080</td>
+                </tr>
+                <tr>
+                    <td>BWT_0100:Baryonix_Beauty_v0001:f1920x1080:exr</td>
+                    <td>/vis/shows/bary/shots/bwt_0100/light_main/baryonix_beauty/v0001/f1920x1080/exr/bwt_0100-baryonix_beauty_v0001.%04d.exr</td>
+                    <td>Baryonix_Beauty</td>
+                    <td>Image</td>
+                    <td>f1920x1080</td>
+                </tr>
+
+                <tr>
+                    <td>BWT_0100:CmpMain_v0001:f1920x1080:jpg</td>
+                    <td>/vis/shows/bary/shots/bwt_0100/comp_main/cmpmain/v0001/f1920x1080/jpg/bwt_0100-cmpmain_v0001.%04d.jpg</td>
+                    <td>CmpMain</td>
+                    <td>Image</td>
+                    <td>f1920x1080</td>
+                </tr>
+                <tr>
+                    <td>BWT_0100:Ground_Debris_v0001:hi:bgeo.sc</td>
+                    <td>/vis/shows/bary/shots/bwt_0100/fx/ground_debris/v0001/hi/bgeo.sc/bwt_0100-ground_debris_v0001.bgeo.sc</td>
+                    <td>Ground_Debris</td>
+                    <td>Cache</td>
+                    <td>hi</td>
+                </tr>
+                <tr>
+                    <td>BWT_0100:Ground_Dust_v0001:hi:vbd</td>
+                    <td>/vis/shows/bary/shots/bwt_0100/fx/ground_debris/v0001/hi/bgeo.sc/bwt_0100-ground_debris_v0001.bgeo.sc</td>
+                    <td>Ground_Debris</td>
+                    <td>Cache</td>
+                    <td>hi</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h1>Texture Layers</h1>
+    <ul>
+        <li>dif</li>
+        <li>opa</li>
+        <li>dsp</li>
+        <li>nrm</li>
+        <li>rgh</li>
+        <li>bmp</li>
+        <li>spc(0) eg: spc1 spc2 etc.</li>
+        <li>emi</li>
+        <li>vdsp</li>
+    </ul>
+
+    <h2>Texture Files Naming (Before Publishing)</h2>
+    <p><code>{variant}_{texture_layer}.{udim}.{extension}</code></p>
+    <ul>
+        <li>base_dif.1001.exr</li>
+        <li>fur_dif.1001.exr (fur is a variant name)</li>
+        <li>base_opa.1001.exr</li>
+        <li>base_dsp.1001.exr</li>
+        <li>base_nrm.1001.exr</li>
+        <li>base_rgh.1001.exr</li>
+        <li>base_bmp.1001.exr</li>
+        <li>base_spc1.1001.exr</li>
+        <li>base_spc2.1001.exr</li>
+        <li>base_emi.1001.exr</li>
+        <li>base_vdsp.1001.exr</li>
+    </ul>
+
+    <h2>Texture Export Channels</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Texture Name</th>
+                <th>R</th>
+                <th>G</th>
+                <th>B</th>
+                <th>A</th>
+                <th>Colorspace</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>base_dif.1001.exr</td>
+                <td>diffuse.r</td>
+                <td>diffuse.g</td>
+                <td>diffuse.b</td>
+                <td>opacity</td>
+                <td>acescg</td>
+            </tr>
+            <tr>
+                <td>base_srm.1001.exr</td>
+                <td>sss_weight</td>
+                <td>specular_roughness</td>
+                <td>metalness</td>
+                <td>n/a</td>
+                <td>utility_raw</td>
+            </tr>
+            <tr>
+                <td>base_toc.1001.exr</td>
+                <td>transmission_weight</td>
+                <td>occlusion</td>
+                <td>curvature</td>
+                <td>n/a</td>
+                <td>utility_raw</td>
+            </tr>
+            <tr>
+                <td>base_bmp.1001.exr</td>
+                <td>bump.r</td>
+                <td>bump.g</td>
+                <td>bump.b</td>
+                <td>n/a</td>
+                <td>utility_raw</td>
+            </tr>
+            <tr>
+                <td>base_emi.1001.exr</td>
+                <td>emission_color.r</td>
+                <td>emission_color.g</td>
+                <td>emission_color.b</td>
+                <td>n/a</td>
+                <td>acescg</td>
+            </tr>
+            <tr>
+                <td>base_nrm.1001.exr</td>
+                <td>normal.r</td>
+                <td>normal.g</td>
+                <td>normal.b</td>
+                <td>n/a</td>
+                <td>utility_raw</td>
+            </tr>
+            <tr>
+                <td>base_id1.1001.exr</td>
+                <td>id.r</td>
+                <td>id.g</td>
+                <td>id.b</td>
+                <td>n/a</td>
+                <td>utility_raw</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

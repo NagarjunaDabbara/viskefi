@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workflow - Lookdev</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #444;
+        }
+        pre {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        img {
+            display: block;
+            margin: 10px 0;
+            max-width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        a {
+            color: #007acc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .dos-donts {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .dos, .donts {
+            flex: 1;
+        }
+        .project-structure img {
+            max-width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Workflow - Lookdev</h1>
+    <h2>Do's</h2>
+    <ul>
+        <li>Make sure that the project is always set for the Maya scene that you are working on.
+            <ul>
+                <li>This makes sure that paths used stay relative, enabling reuse on other machines and operating systems.</li>
+            </ul>
+        </li>
+        <li>Include the turn table light rig as a reference instead of adding it to the lookdev file.
+            <ul>
+                <li>This makes cleanup easier by just removing the reference.</li>
+                <li><strong>Always remember to remove the reference before passing on the file downstream.</strong></li>
+            </ul>
+        </li>
+    </ul>
+    <h2>Don'ts</h2>
+    <ul>
+        <li>Do not use version names in texture files. Use versions only at the top-level directory outside the Maya project.</li>
+    </ul>
+    <div class="dos-donts">
+        <div class="dos">
+            <h3>Correct:</h3>
+            <pre>
+                v0001
+                |_maya
+                  |_sourceimages
+                    |_baryonix
+                      |_hi
+                        |_exr
+                          |_baryonix_col.1001.exe
+            </pre>
+        </div>
+        <div class="donts">
+            <h3>Incorrect:</h3>
+            <pre>
+
+                maya
+                |_sourceimages
+                  |_baryonix
+                    |_v0001
+                      |_exr
+                        |_ baryonix_col_v0001.1001.exr
+            </pre>
+        </div>
+    </div>
+
+    <h2>Maya</h2>
+    <h3>Project Structure</h3>
+    <div class="project-structure">
+        <img src="images/pipeline/workflow-lookdev.jfif" alt="Maya Project Structure">
+    </div>
+
+    <h3>Layer Names</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Layer names</th>
+                <th>Code</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>color/base/albedo</td>
+                <td>col</td>
+            </tr>
+            <tr>
+                <td>Specular color</td>
+                <td>spc</td>
+            </tr>
+
+          <tr>
+            <td>Specular roughness</td>
+            <td>spr</td>
+          </tr>
+          <tr>
+            <td>Metalness</td>
+            <td>mtl</td>
+          </tr>
+          <tr>
+            <td>Bump</td>
+            <td>bmp</td>
+          </tr>
+          <tr>
+            <td>Height</td>
+            <td>hgt</td>
+          </tr>
+
+          <tr>
+            <td>Displacment</td>
+            <td>dsp</td>
+          </tr>
+          <tr>
+            <td>Normal</td>
+            <td>nrm</td>
+          </tr>
+          <tr>
+            <td>Opcacity</td>
+            <td>opc</td>
+          </tr>
+          <tr>
+            <td>Subsurface color</td>
+            <td>sss</td>
+          </tr>
+          <tr>
+            <td>Subsurface radius</td>
+            <td>sssr</td>
+          </tr>
+          <tr>
+            <td>Coat color</td>
+            <td>coat</td>
+          </tr>
+          <tr>
+            <td>Coat roughness </td>
+            <td>coatr</td>
+          </tr>
+          <tr>
+            <td>Sheen color </td>
+            <td>shn</td>
+          </tr>
+          <tr>
+            <td>Emission </td>
+            <td>emsn</td>
+          </tr>
+          <tr>
+            <td>Masks</td>
+            <td>msk_1, msk_2, msk_3 and so on</td>
+          </tr>
+        </tbody>
+    </table>
+    <h2>Color Settings</h2>
+    <h3>Instructions</h3>
+    <h4>Maya</h4>
+    <p>Set environment variable in Maya.env</p>
+    <li>OCIO=< path where you have saved your .ocio config ></li>
+     <p>Other Apps</p>   
+    <p>Set environment variable at the system level</p>
+</body>
+</html>

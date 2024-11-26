@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workflow - ASSET Dept</title>
+    <link rel="stylesheet" href="css/DepartmentalWorkflows.css">
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+    <h1>Workflow - ASSET Dept</h1>
+    <p>Asset Dept = Modeling And Texturing</p>
+    <ul>
+        <h2>INPUTS:</h2>
+        <li>Asset dept collects reference images as .JPEG, .PNG.</li>
+        <li>In some cases client provides the photogrammetry mesh,Latter scan,CAD-mesh files.</li>
+        <li>Asset dept are first dept to start the workflow so Asset dept don't get any input files from any Dept.</li>
+        <li>Asset dept works using Maya and Z-Brush for modeling and Mari and substance for Texturing.</li>
+        <li>Texture Dept gets .obj and .ma file formats.</li>
+    </ul>
+    <ul>
+        <h2>OUTPUTS:</h2>
+        <li>Asset dept send files to Rigging if Character exist,Lighting, FX and Groom dept.</li>
+        <li>Asset dept exports model,Textures and Lookdev(Shading) as one file.</li>
+        <li>Texture dept exports output files in .exr/.jpeg formats.</li>
+        <li>Only Groom dept gets .abc files and rest all output dept of Model dept exports .ma files.</li>
+    </ul>
+    <ul>
+        <h2>ISSUES</h2>
+        <li>Difficulty in transferring files from One dept to another Dept.</li>
+        <li>Turn off “Auto Convert Texture“ by default while rendering.</li>
+        <li>On clicking Ctrl+S on the published file, the file is getting overwritten rather than creating a draft file.</li>
+        <li>Published files not to be overwritten it should be locked and needs to prompt for new desired location for saving the published file as new file.</li>
+        <li>Shotgrid menu is getting disabled while trying to save file locally on RAMP project.</li>
+    </ul>
+    </div>
+</body>
+</html>

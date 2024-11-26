@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyBlish</title>
+    <link rel="stylesheet" href="css/DepartmentalWorkflows.css">
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+pre {
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+code {
+  font-family: Consolas, "Courier New", Courier, monospace;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+h3 {
+  margin-top: 20px;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+    <h1>PyBlish</h1>
+    <ul>
+        <li><a href=""style="text-decoration: none;">Introduction</a></li>
+        <li><a href=""style="text-decoration: none;">Collectors</a></li>
+        <ol type="a">
+            <li><a href=""style="text-decoration: none;">Order</a></li>
+        <li><a href=""style="text-decoration: none;">Hosts</a></li>
+        <li><a href=""style="text-decoration: none;">Label</a></li>
+        <li><a href=""style="text-decoration: none;">Families</a></li>
+        <li><a href=""style="text-decoration: none;">Process</a></li>
+        <li><a href=""style="text-decoration: none;">Context</a></li>
+        </ol>
+        <li><a href=""style="text-decoration: none;">Validators</a></li>
+        <li><a href=""style="text-decoration: none;">Extractors</a></li>
+        <li><a href=""style="text-decoration: none;">Integrators</a></li>
+        <li><a href=""style="text-decoration: none;">Registering pyblish plugins</a></li>
+    </ul>
+    <h2>Introduction</h2>
+    <li>Pyblish is an open source, cross-platform framework for test-driven content creation.</li>
+    <li>Pyblish by Example is a hands-on introduction to Pyblish using short example programs written like a book - to be read from top to bottom.</li>
+    <li>What is Publishing?</li>
+    <p>Find the detailed documentation on Pyblish here <a href="">Introduction | Pyblish By Example </a></p>
+    <p>Pyblish has 2 superclasses ContextPlugin and InstancePlugin . The order in which these plug-ins are run is controlled by an integer attribute called order, with 4 default values.</p>
+    
+    <li>Collection</li>
+    <li>Validation</li>
+    <li>Extraction</li>
+    <li>Integration</li>
+<h2>Collectors</h2>
+<p>Collector usually a ContextPlugin as it is mainly responsible for collecting assets, textures etc. which needs to be published</p><br><br>
+    
+<section>
+  <pre>
+    <code>
+import pyblish.api
+
+class CollectModels(pyblish.api.ContextPlugin):
+"""Collect models in the scene"""
+
+order = pyblish.api.CollectorOrder + 0.1
+hosts = ["maya"]
+label = "Collect Models"
+families = ["asset", "child_assets"]
+
+def process(self, context):
+    """
+    Collect models in the scene.
+
+    Args:
+        context(pyblish.plugin.Context): pyblish context
+    """
+    for model_grp in ["list of groups"]:
+        instance = context.create_instance(model_grp)
+        instance.data["family"] = "asset"
+    </code>
+  </pre>
+</section>
+
+<p>In the above example the Collector CollectModels is a ContextPlugin since it inherits the ContexPlugin superclass.</p>
+<h3>Order</h3>
+<p>The order in which the Plugins runs can be specified using the order class variable, we can also set the order as pyblish.api.CollectorOrder to make sure that the Collector runs the correct order</p>
+<li>order = pyblish.api.CollectorOrder + 0.1</li>
+<h3>Hosts</h3>
+<p>We can specify the host in which the plugins should run by specifying the host list in the class as below</p>
+<li>hosts=["maya"]</li>
+<h3>Label</h3>
+<p>This variable sets the Pyblish plugin name to be displayed in the UI.</p>
+<li>label = "Collect Models"</li>
+
+
+<h3>Families</h3>
+<p>we can use the families variable passed with the instance to make sure that the validation runs only if the instance belongs to a specific family.</p>
+<p>to set the family for the instance in the Collector</p>
+<li>instance.data["family"]= "asset"</li>
+
+<h3>Process</h3>
+<p>This is the were the functionality of the plugin goes, this function takes 1 argument which is a context in the above example since it is a ContextPlugin and set to instance in case of InstancePlugins</p>
+<li>def process(self,context):</li>
+
+<h3>Context</h3>
+<p>context is a collection of instance, the instance for each collected node/texture is stored in the instance of the context as shown below</p>
+<li>for model_grp in ["list of groups"]:</li>
+<li>instance = context.create_instance(model_grp)</li> 
+<li>instance.data["family"] = "asset"</li> 
+<p>Note:- you can store instance specific data by using the above line</p>
+<span>instance.data[data_key] = Data To Store</p>
+<h2>Validators</h2>
+<li>Validators are responsible for validating the collected data. Below is an example of the validator class</li>
+
+<section>
+    <pre>
+      <code>
+        import pyblish.api
+
+
+        class ValidateModels(pyblish.api.InstancePlugin):
+            """Validate models and check for history"""
+        
+            order = pyblish.api.ValidatorOrder + 0.1
+            hosts = ["maya"]
+            label = "Validate check history"
+            families = ["asset" , "child_assets"]
+        
+            def process(self, instance):
+                """
+        
+                Validate models and check for history.
+        
+                args:
+                    context(pyblish.plugin.Context): pyblish context
+        
+                """
+                from maya import cmds
+                model_grp = instance.data["name"]
+                shape_nodes = cmds.ls(model_grp, dag=1, s=1)
+                invalid_nodes = []
+                for shape_node in shape_nodes:
+                    sp_history = list(set(cmds.listHistory(shape_node)) - set([shape_node]))
+                    if sp_history:
+                        invalid_nodes.append(shape_node)
+                assert not invalid_nodes, "Nodes with history found : \n{}".format("\n".join(invalid_nodes))
+        
+      </code>
+    </pre>
+  </section>
+<li>we can see a change in the order as pyblish.api.ValidatorOrder to make sure is does not run with the collectors and runs in its own order. </li>
+<li>This is usually an InstancePlugin since we need to verify the collected data individually.</li>
+<li>The process function in this case uses an instance as an argument.</li><br><br>
+
+<li>Fetching the data from the instance can be done using then the validation can be performed on that data</li>
+<ol type="1">
+  <li>instance.data[< Data Key >]</li>  
+</ol>
+<p>to specify the family for the validator set the class variable as mentioned above in line 10</p>
+<ol>
+    <li>families = ["asset", "child_assets"]</li>
+</ol>
+<p>once we set this, the validator will only run for the instance which belongs to the specified family</p>
+<h2>Extractors</h2>
+<li>Extractors are responsible to running the pre-publish task of exporting the assets, add Variables etc.</li>
+
+<section>
+    <pre>
+      <code>
+        import pyblish.api
+        from maya_pyblish_plugins.plugins.extractors import generate_pref
+        
+        
+        class ExtractModelsAddPrefAttr(pyblish.api.InstancePlugin):
+            """ Adds Pref Attribute to the model. """
+        
+            order = pyblish.api.ExtractorOrder + 0.1
+            hosts = ["maya"]
+            label = "Extract: Add Pref Attr to Model"
+        
+            def process(self, instance):
+                """
+        
+                Generate Pref on selected objects on specified frame.
+        
+                args:
+                    instance(pyblish.plugin.Instance): pyblish instance
+        
+                """
+                from maya import cmds
+                model_grp = instance.data["name"]
+                
+                cmds.select(model_grp)
+                generate_pref.generate_pref(1001)
+        
+</section>
+</pre>
+      </code>
+<p>The order is set to ExtractorOrder to run it after the validations and with the other extractors</p>
+<h2>Integrators</h2>
+<li>Integrators are responsible for publishing the exported data from extractors and publishes it in the appropriate folders in production. </li>
+<li>This is also responsible for submitting the data to SG.</li>
+
+<section>
+    <pre>
+        <code>
+            import pyblish.api
+
+
+class IntegrateSGPublish(pyblish.api.ContextPlugin):
+    """ Launch SG publish. """
+
+    order = pyblish.api.IntegratorOrder + 0.1
+    hosts = ["maya"]
+    label = "Integrate: Launch SG Publish"
+
+    def process(self, context):
+        """
+
+        Launch SG Publish
+
+        args:
+            context(pyblish.plugin.Context): pyblish instance
+
+        """
+        import sgtk
+        engine = sgtk.platform.current_engine()
+        engine.commands["Publish..."]["callback"]()
+
+        </code>
+    </pre>
+</section>
+<h2>Registering pyblish plugins</h2>
+<li>The pyblish plugins can be registered directly from maya script editor as mentioned in the below example</li>
+<section>
+    <pre>
+        <code>
+            import pyblish.api
+import pyblish_maya
+
+pyblish.api.register_gui("pyblish_lite")
+pyblish_maya.setup()
+pyblish.api.register_host("maya")
+from maya_pyblish_plugins.plugins.collectors import collect_models
+from maya_pyblish_plugins.plugins.validators import validate_models
+from maya_pyblish_plugins.plugins.extractors import extract_models
+from maya_pyblish_plugins.plugins.integrators import integrate_models_sg_publish
+
+pyblish.api.register_plugin(collect_models.Collectmodels)
+pyblish.api.register_plugin(validate_models.Validatemodels)
+pyblish.api.register_plugin(extract_models.ExtractModelsAddPrefAttr)
+pyblish.api.register_plugin(integrate_models_sg_publish.IntegratePublishToSG)
+        </code>
+    </pre>
+</section>
+</div>
+</body>
+</html>

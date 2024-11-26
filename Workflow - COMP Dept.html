@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workflow - COMP Dept</title>
+    <link rel="stylesheet" href="css/DepartmentalWorkflows.css">
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+    <h1>Workflow - COMP Dept</h1>
+    <ul>
+        <h2>INPUTS:</h2>
+        <li>COMP is the final Dept so, all Departments are their up-stream Dept’s.</li>
+       <li>COMP gets data from Editorial Dept as Scan editorial,File reformating,Colour-Luts, etc, as default for each scene and shot with Meta Data.</li> 
+       <li>COMP has .abc, .jpeg, .exr, .nk as input formats along with editorial dept stuff.</li>
+        <li>COMP uses NUKE,MOCHA and Silhouette as their working environment.</li>
+        <li>For PREP - MOCHA and Silhouette and ROTO uses Silhouette softwares. </li>
+    </ul>
+    <ul>
+        <h2>OUTPUTS:</h2>
+        <li>Being a final Dept ,COMP don't have down-stream Dept.</li>
+        <li>COMP finally Export Renders and get Published.</li>
+        <li>COMP export their data in .exr, .dpx, .jpeg etc formats.</li>
+    </ul>
+    <ul>
+        <h2>ISSUES</h2>
+        <li>COMP can't specifically login through shot by shot in their respective shows.</li>
+        <li>Everything is doing manually need to be automated.</li>
+        <li>Maximum plugins are not working correctly.</li>
+        <li>SG is responding very slow for NUKE.</li>
+    </ul>
+    </div>
+</body>
+</html>

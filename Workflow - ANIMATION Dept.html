@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Department Workflow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section {
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .issues li {
+            color: #d9534f;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Workflow - Animation Dept</h1>
+
+    <div class="section">
+        <h2>Inputs</h2>
+        <ul>
+            <li><strong>Rig Wrappers:</strong> Updates of rigs being done manually.</li>
+            <li><strong>Camera:</strong>
+                <ul>
+                    <li>Manual references being done.</li>
+                    <li>Full QC: Right now being done by the artist itself.</li>
+                </ul>
+            </li>
+            <li><strong>Textures:</strong>
+                <ul>
+                    <li>Done manually after requesting Assets.</li>
+                    <li>Manual texture assignment for the work.</li>
+                </ul>
+            </li>
+            <li><strong>Environment:</strong>
+                <ul>
+                    <li>Artist will share the path.</li>
+                    <li>Manual referencing of the files.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Outputs</h2>
+        <ul>
+            <li><strong>Playblast:</strong>
+                <ul>
+                    <li>Write in temp.</li>
+                    <li>Updated to upload via browser.</li>
+                </ul>
+            </li>
+            <li><strong>Maps Folder:</strong> Shot grid for final EXR/MP and staging for the library.</li>
+            <li><strong>Automatic Cache:</strong>
+                <ul>
+                    <li>Exported manually to a server location and share the path.</li>
+                    <li>Each character is exported separately.</li>
+                    <li>Cameras are exported separately.</li>
+                    <li>Environment is also baked separately from Animations to Lighting.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section issues">
+        <h2>Issues</h2>
+        <ul>
+            <li>Assets are still able to see rig work files from version 1 even if it is the latest version.</li>
+            <li>Rigs have invisible functions once loaded after rig use.</li>
+            <li>Unknown QC from guides to other locations.</li>
+            <li>Animators are not getting the solved caches.</li>
+            <li>Assets do partial revisions of all the modifications in the studio.</li>
+            <li>Not every rig is following the naming conventions.</li>
+            <li>Final playblast still has to be exported manually from a shared location in the studio.</li>
+            <li>Ambient occlusion lighting is not added to all models.</li>
+            <li>Shots for short-term review need written or keepable tools.</li>
+            <li>Ambient animation lighting needs to be distributed across individual progress bars instead of a single deliverable.</li>
+            <li>Would be good to publish playblast to changed details from maps.</li>
+            <li>Errors on how to upload playblast from maps to staging.</li>
+        </ul>
+    </div>
+
+</body>
+</html>

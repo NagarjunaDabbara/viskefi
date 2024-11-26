@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viskefi-naming convention to be followed while publishing through pyblish in maya.</title>
+</head>
+<body>
+    <h1>Viskefi-naming convention to be followed while publishing through pyblish in maya.</h1>
+    <h2>Asset Naming convention:</h2>
+    <h3>Modeling Naming convention :</h3>
+    <li>Asset naming template : {assettype}{AssetName}_grp</li>
+    <ol type="a">
+        <li>character model example name: chrFrog_grp</li>
+        <li>prop model example name: propGadha_grp</li>
+        <li>environment model example name: envPark_grp</li>
+        <li>vehicle model example name: vehMustang_grp</li>
+    </ol>
+    <h2>Texturing Naming convention :</h2>
+    <li>Need to fill. </li>
+    <h2>Rigging Naming convention :</h2>
+    <li>requirements in the scene file:</li>
+    <ol type="a">
+        <li>set name: abcSet</li>
+        <li>set contains: modelGrp group</li>
+        <li>modelGrp group contains: Model ( for model name refer the model naming section)</li>
+        <li>rig naming convention : {assettype}{AssetName}_grp </li>
+    </ol>
+    <li>Reference image from maya outliner : </li>
+    <img src="images/pipeline/Viskefi-naming convention to be followed while publishing through pyblish in maya1.png" alt="">
+    <h2>Lookdev Naming convention : </h2>
+    <li>Fill here</li>
+    <h2>Shot Naming convention:</h2>
+    <h3>Animation Naming convention (abc) publish : </h3>
+    <li>Requirements for alembic publish :</li>
+    <ol type="a">
+        <li>set name: abcSet</li>
+        <li>set contains: modelGrp group</li>
+        <li>modelGrp group contains: Model ( for model name refer the model naming section)</li>
+    </ol>
+    <p>Note : alembic gets published only if there is an abc set created with the correct model group.</p>
+    <li>Camera publish in animation :</li>
+    <ol type="a">
+        <li>main camera group name : renderCam_grp</li>
+        <li>main camera name : renderCam</li>
+    </ol>
+    <h2>Matchmove (camera) Naming convention : </h2>
+    <li>main camera group name : renderCam_grp</li>
+    <li>main camera name : renderCam</li>
+    <li>mmgeo name : mmGeo_grp</li>
+    <li>reference image</li>
+    <img src="images/pipeline/Viskefi-naming convention to be followed while publishing through pyblish in maya2.png" alt="">
+    <h2>aiStandIn-Naming convention : </h2>
+    <li>all the standins must be grouped with the group name as follows </li>
+    <li>CFX_{standin_type}</li>
+    <li>Example : </li>
+    <img src="images/pipeline/Viskefi-naming convention to be followed while publishing through pyblish in maya3.png" alt="">
+    <p>Standins can be imported in to the scene from Viskefi > general  > AiStandin Importer in maya.    </p>
+</body>
+</html>

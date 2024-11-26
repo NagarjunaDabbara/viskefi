@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipeline Do's and Don'ts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        ul li span {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .good {
+            color: green;
+        }
+        .bad {
+            color: red;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: Consolas, "Courier New", monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pipeline Do's and Don'ts</h1>
+    <h2>File Paths</h2>
+    <p><strong>User Relative paths (when supported)</strong></p>
+    <ul>
+        <li><span class="bad">✘</span><code>D:\\MyProjects\\MayaProject\\SourceImages\\somefile.ext</code></li>
+        <li><span class="good">✔</span><code>SourceImages\\somefile.ext</code></li>
+    </ul>
+    
+    <h2>Plug-ins</h2>
+    <p><strong>Do not use plug-ins not approved by production</strong></p>
+    <p>
+        There might be scenarios where you might be testing some third-party plug-in due to personal interest. However, having those enabled while working on production files might lead to dependency about those plug-ins included in your scene files, which can cause issues when the files reach the studio infrastructure.
+    </p>
+    <p>As a general rule of thumb:</p>
+    <ul>
+        <li><span class="good">✔</span> DO NOT enable auto-load of plug-ins that are not approved by production</li>
+    </ul>
+</body>
+</html>

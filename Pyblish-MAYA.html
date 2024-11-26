@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyblish-MAYA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 5px;
+        }
+        ul li a {
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pyblish-MAYA</h1>
+    <p><strong>Pyblish integration for Autodesk Maya.</strong></p>
+    
+    <h2>Contents</h2>
+    <ul>
+        <li><a href="#what-is-included">What is included?</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#documentation">Documentation</a></li>
+        <li><a href="#under-the-hood">Under the hood</a></li>
+        <li><a href="#no-menu-item">No menu-item</a></li>
+        <li><a href="#manually-show-gui">Manually show GUI</a></li>
+        <li><a href="#teardown-pyblish-maya">Teardown pyblish-maya</a></li>
+        <li><a href="#no-gui">No GUI</a></li>
+    </ul>
+    
+    <h2 id="what-is-included">What is included?</h2>
+    <p>A set of common plug-ins and functions shared across other integrations - such as getting the current working file. It also visually integrates Pyblish into the File-menu for easy access.</p>
+    <ul>
+        <li>Common plug-ins</li>
+        <li><a href="https://github.com/pyblish/pyblish-base#functionality" target="_blank">Common functionality</a></li>
+        <li>File-menu shortcut</li>
+    </ul>
+    
+    <h2 id="installation">Installation</h2>
+    <p>pyblish-maya depends on <a href="https://pypi.org/project/pyblish-base/" target="_blank">pyblish-base</a> and is available via PyPI.</p>
+    <pre>pip install pyblish-maya</pre>
+    <p>You may also want to consider a graphical user interface, such as <a href="https://github.com/pyblish/pyblish-qml" target="_blank">pyblish-qml</a> or <a href="https://github.com/pyblish/pyblish-lite" target="_blank">pyblish-lite</a>.</p>
+    
+    <h2 id="usage">Usage</h2>
+    <p>To get started using pyblish-maya, run <code>setup()</code> at startup of your application.</p>
+    <pre>
+# 1. Register your favourite GUI
+import pyblish.api
+pyblish.api.register_gui("pyblish_lite")
+
+# 2. Set-up Pyblish for Maya
+import pyblish_maya
+pyblish_maya.setup()
+    </pre>
+    
+    <h2 id="documentation">Documentation</h2>
+    <ul>
+        <li><a href="#under-the-hood">Under the hood</a></li>
+        <li><a href="#manually-show-gui">Manually show GUI</a></li>
+        <li><a href="#no-menu-item">No menu-item</a></li>
+        <li><a href="#teardown-pyblish-maya">Teardown pyblish-maya</a></li>
+        <li><a href="#no-gui">No GUI</a></li>
+    </ul>
+
+
+
+    <h1>Pyblish-MAYA Documentation</h1>
+    
+    <h2 id="under-the-hood">Under the hood</h2>
+    <p>The <code>setup()</code> command will:</p>
+    <ul>
+        <li>Register <code>maya</code> and <code>mayapy</code> as a "host" to Pyblish, allowing plug-ins to be filtered accordingly.</li>
+        <li>Append a new menu item, "Publish" to your File-menu.</li>
+        <li>Register a minimal set of plug-ins that are common across all integrations.</li>
+    </ul>
+    <img src="images/pipeline/pyblish-maya1.png" alt="Pyblish Maya Menu Example">
+
+    <h2 id="no-menu-item">No menu-item</h2>
+    <p>Should you not want a menu-item, pass <code>menu=False</code>.</p>
+    <pre>
+import pyblish_maya
+pyblish_maya.setup(menu=False)
+    </pre>
+
+    <h2 id="manually-show-gui">Manually show GUI</h2>
+    <p>The menu-button is set to run <code>show()</code>, which you may also manually call yourself, such as from a shelf-button.</p>
+    <pre>
+import pyblish_maya
+pyblish_maya.show()
+    </pre>
+
+    <h2 id="teardown-pyblish-maya">Teardown pyblish-maya</h2>
+    <p>To get rid of the menu and completely remove any trace of pyblish-maya from your Maya session, run <code>teardown()</code>.</p>
+    <pre>
+import pyblish_maya
+pyblish_maya.teardown()
+    </pre>
+    <p>This will do the opposite of <code>setup()</code> and clean things up for you.</p>
+
+    <h2 id="no-gui">No GUI</h2>
+    <p>In the event that no GUI is registered upon running <code>setup()</code>, the button will provide the user with this information on how they can get up and running on their own.</p>
+    <img src="images/pipeline/pyblish-maya2.png" alt="No Registered GUI Error"><br>
+    <img src="images/pipeline/pyblish-maya3.png" alt="No Registered GUI Error"><br>
+    <img src="images/pipeline/pyblish-maya4.png" alt="No Registered GUI Error"><br>
+
+</body>
+</html>

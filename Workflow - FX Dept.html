@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workflow -  FX Dept</title>
+    <link rel="stylesheet" href="css/DepartmentalWorkflows.css">
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+    <h1>Workflow -  FX Dept</h1>
+    <ul>
+        <h2>INPUTS:</h2>
+       <li>FX have ANIM and MATCHMOVE as Upstream Dept’s.</li>
+       <li>FX imports .abc from ANIM and camera,BG plate from MATCHMOVE as formats.</li>
+       <li>FX have .abc, .fbx, .xgen as an input formats from up-stream departments.</li>
+       <li>FX uses Houdini, Maya as working environment and for internal checking FX use NUKE.</li> 
+    </ul>
+   
+    <ul>
+        <h2>OUTPUTS:</h2>
+       <li>FX have .ass, .vdb, .abc as output foormats  for down-stream departments.</li> 
+       <li>FX exports .abc(mesh) and seq alembic for Lighting .</li>
+       <li>FX also exports .vdb for volumetric if Lighting requires.</li>
+    </ul>
+    <ul>
+        <h2>ISSUES</h2>
+       <li> Importing data from up-stream Dept’s should be in .abc for char and .obj, .abc for BG needed.</li>
+       <li> Camera must be in .fbx or .abc formats.</li>
+    </ul>
+    </div>
+</body>
+</html>

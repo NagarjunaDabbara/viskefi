@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workflow - Lighting Dept</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4 {
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section {
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .code-block {
+            background: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: monospace;
+            margin: 10px 0;
+        }
+        .issues li {
+            color: #d9534f;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Workflow - Lighting Dept</h1>
+
+    <div class="section">
+        <h2>Inputs</h2>
+        <ul>
+            <li><strong>Lighting Dept inputs:</strong> For every Dept except COMP Dept.</li>
+            <li>Includes animation, assets, props, shaders, caches, and FX elements.</li>
+            <li>Rigging manual match shader used.</li>
+            <li>Lighting updates files from FX Dept through hidden restricted steps.</li>
+            <li>Animation updates: Delivered daily or as needed.</li>
+            <li>Caches and cameras are shared separately.</li>
+            <li>FX cache versions: Delivered with QA check.</li>
+            <li>Specific Inputs:
+                <ul>
+                    <li><strong>Animation:</strong> Maya cache updates.</li>
+                    <li><strong>Rigging:</strong> Rig updates.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>System Requirements</h2>
+        <ul>
+            <li>Animation: Keyframe cache.</li>
+            <li>FX Input Assets:
+                <ul>
+                    <li>VDB generation.</li>
+                    <li>Mesh volumes.</li>
+                    <li>Camera work.</li>
+                    <li>Object tools.</li>
+                </ul>
+            </li>
+            <li>Final layout animation.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Queries</h2>
+        <ol>
+            <li>How to differentiate between rigged steps and non-generative steps?</li>
+            <li>The movie production file includes multiple FX folders. Is there a default location to resolve tasks?</li>
+        </ol>
+        <div class="code-block">
+            fx_master.asset<br>
+            ├── cache (animation-related cache files)<br>
+            ├── FXD<br>
+            ├── setup<br>
+            └── version<br>
+        </div>
+        <p>Which subfolder and which input area are auto-published?</p>
+    </div>
+
+    <div class="section">
+        <h2>Published File Types</h2>
+        <p><strong>Locations delivered to the blueprint:</strong></p>
+        <div class="code-block">
+            fx_layout_folder<br>
+            fx_setup_files<br>
+            final_cache_folder<br>
+        </div>
+        <ul>
+            <li>Simulation setups for rendering.</li>
+            <li>All file auditing via the software.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Outputs</h2>
+        <ul>
+            <li>Lighting Dept files as outputs from Maya/Arnold.</li>
+            <li>Lighting Dept input files are delivered to COMP Dept.</li>
+        </ul>
+    </div>
+
+    <div class="section issues">
+        <h2>Issues</h2>
+        <ul>
+            <li>Ensuring finality for the FX folder manually for every film.</li>
+            <li>Rigging automation is missing in secondary scene importing (very time-consuming).</li>
+            <li>Handling cameras for long-scale rendering by fixing global cache steps.</li>
+            <li>Lighting process requires team leads to run over 150 solver batches for shot-lighting import and caching for reuse.</li>
+        </ul>
+    </div>
+
+</body>
+</html>
