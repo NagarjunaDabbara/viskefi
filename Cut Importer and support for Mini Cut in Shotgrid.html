@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cut Importer and Support for Mini Cut in ShotGrid</title>
+<style>
+    /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #f5f5f5;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+    color: #666;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h2, h3 {
+    color: #444;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5rem;
+}
+
+ul, ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+ul li, ol li {
+    margin-bottom: 0.5rem;
+}
+
+blockquote {
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    background-color: #f0f0f0;
+    border-left: 4px solid #ccc;
+    font-style: italic;
+}
+
+.image-container {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.image-container img {
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <h1>Cut Importer and Support for Mini Cut in ShotGrid</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#cut-importer">Cut Importer</a></li>
+                <li><a href="#supported-formats">Supported Interchange Formats</a></li>
+                <li><a href="#mini-cut-support">Support for Mini Cut in ShotGrid</a>
+                    <ul>
+                        <li>RV through the screening room</li>
+                        <li>Seeing the entire cut</li>
+                        <li>Swapping between the versions</li>
+                        <li>Comparing between the stages of the shot</li>
+                        <li>Comparing images/versions with Wipes</li>
+                    </ul>
+                </li>
+                <li><a href="#references">Reference Links</a></li>
+            </ul>
+        </section>
+
+        <section id="cut-importer">
+            <h2>Cut Importer</h2>
+            <p>The Import Cut app is a simple and easy way to create a Cut in ShotGrid based on an EDL from editorial.</p>
+            <p>Import Cut will display the new in points, out points, and frame ranges against what was already tracked in ShotGrid, highlighting any differences.</p>
+            <p>Import Cut is built into RV and can be accessed via the "ShotGrid" menu or by <strong>Alt+I</strong> shortcut key in RV.</p>
+            <div class="image-container">
+                <img src="images/pipeline/Cut Importer and support for Mini Cut in Shotgrid.html" alt="Import Cut UI Example">
+            </div>
+        </section>
+
+        <section>
+            <h3>Steps to Create a Cut</h3>
+            <ol>
+                <li>
+                    <strong>Export an EDL (CMX)</strong>
+                    <p>You can get the .edl file from either the client or the editorial department.</p>
+                    <blockquote>
+                        Sometimes you are provided with the .XML file instead of the .EDL. In this case, you can follow this documentation on how to convert .XML to .EDL.
+                        <a href="convert-xml.html">How to Convert .XML to .EDL</a>
+                    </blockquote>
+                </li>
+                <li>
+                    <strong>Open RV and launch Import Cut</strong>
+                    <p>Find it in the "ShotGrid" menu or by <strong>Alt+I</strong> shortcut in RV.</p>
+                </li>
+                <li>
+                    <strong>Drag in the EDL (and Media, if available)</strong>
+                </li>
+            </ol>
+        </section>
+    </main>
+</body>
+</html>
