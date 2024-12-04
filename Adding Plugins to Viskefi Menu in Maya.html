@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Plugins to Viskefi Menu in Maya</title>
+</head>
+<body>
+    <h1>Adding Plugins to Viskefi Menu in Maya</h1>
+    <p>This guide outlines the steps to integrate a developed or third-party plugin into the Viskefi space within Maya's ShotGrid integration. Follow these instructions to ensure the plugin is added successfully and deployed across the studio environment</p>
+<hr>
+    <h2>A. Overview</h2>
+<p>This process includes:</p>
+<li>Creating a Jira ticket for tracking.</li>
+<li>Identifying the correct placement for the plugin in the Viskefi menu.</li>
+<li>Adding and organizing the plugin source code in the Maya repository.</li>
+<li>Testing and deploying the plugin for studio-wide availability.</li>
+<hr>
+<h2>B. Steps to Add a Plugin</h2>
+<li>Step 1: Create a Jira Ticket and Branch</li>
+<li>After developing or acquiring the plugin, log the event by creating a Jira ticket to track progress.</li>
+<li>Create a dedicated branch in the Maya repository corresponding to the Jira ticket.</li>
+<ol type="a">
+    <li>Follow branch-naming conventions for consistency and traceability.</li>
+</ol>
+<hr>
+<h2>Step 2: Determine Plugin Placement</h2>
+<li>Identify the appropriate section in the Viskefi menu for the plugin.</li>
+<ol type="a">
+    <li>For example, if the plugin belongs to the General tab, plan its placement within this section.</li>
+</ol>
+<li>The placement should align with the existing tab hierarchy in the Viskefi space.  </li>
+<img src="images/shortgrid/Adding Plugins to Viskefi Menu in Maya1.png" alt="">
+<hr>
+<h2>Step 3: Add the Plugin Source Code</h2>
+<ol type="1">
+    <li>Open the Maya repository and navigate to the directory where Viskefi menu space is defined.
+</li>
+<ol type="a">
+    <li>Locate the corresponding section or tab under which the plugin will reside.</li>
+</ol>
+<li>For example, if you are adding a plugin named RandomSelect under the General tab, the structure might look like this:-
+</li>
+<p>Example Path: maya/viskefi_menu/scripts/menu/general/RandomSelect.py</p>
+<img src="images/shortgrid/Adding Plugins to Viskefi Menu in Maya2.png" alt="">
+<li>Place the plugin's source code files into a new directory, adhering to the structure:</li>
+<p>Example Path:- maya/third-party/scripts/AdvancedSkeleton.mel</p>
+<img src="images/shortgrid/Adding Plugins to Viskefi Menu in Maya3.png" alt="">
+</ol>
+<hr>
+<h2>Step 4: Self-Test the Plugin</h2>
+<ol type="1">
+    <li>After placing the source code:
+</li>
+<ol type="a">
+    <li>Run local tests to confirm the plugin integrates with the Viskefi menu.</li>
+    <li>Build the branch in viskefi-maya Repo by REZ build -i -v</li>
+    <li>Get into the REZ env viskefi_maya environment.</li>
+    <li>Launch maya from SG</li>
+    <li>Verify the plugin functionality and UI compatibility.</li>
+</ol>
+<li>Document any dependencies or required configurations.</li>
+</ol>
+<hr>
+<h2>Step 5: Commit and Push</h2>
+<ol type="1">
+    <li>Commit the changes to the branch created in Step 1.</li>
+    <li>Push the branch to the repository and inform the internal testing team.</li>
+</ol>
+<hr>
+<h2>Step 6: Internal Testing</h2>
+<ol type="1">
+    <li>Request internal testers to validate the plugin.</li>
+    <ol type="a">
+        <li>Ensure functionality and UI performance are aligned with the studio's standards.</li>
+        <li>Check for compatibility with existing plugins and menus.
+        </li>
+        <li>Resolve any issues or bugs reported during testing.</li>
+        </ol>
+        <li>Resolve any issues or bugs reported during testing.</li>
+</ol>
+<h2>Step 7: Deployment</h2>
+<ol type="1">
+    <li>Once testing is complete and the plugin works as expected:</li>
+    <ol type="a">
+        <li>Merge the branch into the main repository following the studio's deployment guidelines.</li>
+        <li>Deploy the plugin to the studio environment.</li>
+    </ol>
+    <li>Update documentation to include the new plugin and notify users.</li>
+</ol>
+<hr>
+<h2>C. Notes</h2>
+<li>Always follow version control best practices when working in the repository.</li>
+<li>Ensure the plugin adheres to the studio’s coding and UI standards.</li>
+<li>Include any plugin-specific dependencies or configuration files required for it to function.</li>
+</body>
+</html>
